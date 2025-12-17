@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import.meta.env.BASE_URL
 
 function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,7 +45,7 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 <a
-  href={`${import.meta.env.BASE_URL}/My_portfolio/my_resume.pdf`}
+  href={`${import.meta.env.BASE_URL}my_resume.pdf`}
   target="_blank"
   rel="noopener noreferrer"
   className="border border-blue-600 dark:border-blue-400 
@@ -54,6 +55,7 @@ function Navbar({ darkMode, setDarkMode }) {
 >
   Resume
 </a>
+
 
 
 
