@@ -46,7 +46,7 @@ function Navbar({ darkMode, setDarkMode }) {
           </ul>
 
           {/* Resume */}
-          <a
+          {/* <a
             href="/my_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,7 +56,11 @@ function Navbar({ darkMode, setDarkMode }) {
               hover:bg-blue-600 hover:text-white transition"
           >
             Resume
-          </a>
+          </a> */}
+          <a href={`${import.meta.env.BASE_URL}my_resume.pdf`} target="_blank">
+  Resume
+</a>
+
 
           {/* Theme Toggle */}
           <button
