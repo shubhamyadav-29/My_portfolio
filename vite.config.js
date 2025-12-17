@@ -4,6 +4,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/My_portfolio/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
 });
 
 // import { defineConfig } from 'vite'
