@@ -1,34 +1,42 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center px-6">
-      <div className="max-w-4xl text-center">
+    <section className="min-h-[90vh] flex items-center justify-center px-4 text-center">
+      <div className="max-w-4xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-3xl md:text-6xl font-bold text-blue-600 dark:text-blue-400"
+        >
+          Shubham Yadav
+        </motion.h1>
 
-        <h1 className="text-5xl md:text-6xl font-bold text-white">
-          Hi, I’m <span className="text-blue-400">Shubham Yadav</span>
-        </h1>
-
-        <h2 className="mt-4 text-2xl md:text-3xl text-gray-300">
+        <motion.h2
+          className="mt-4 text-lg md:text-2xl text-gray-700 dark:text-gray-300"
+        >
           Aspiring Full-Stack Developer
-        </h2>
+        </motion.h2>
 
-        <p className="mt-6 text-gray-400 text-lg">
-          Final-year BSc IT student passionate about React, Python,
-          Django, and Full-Stack Development.
-        </p>
+        <motion.p
+          className="mt-6 text-sm md:text-lg text-gray-600 dark:text-gray-400"
+        >
+          Final-year BSc IT student passionate about building modern web
+          applications using React, Python, Django, and MySQL.
+        </motion.p>
 
-        <div className="mt-8 flex justify-center gap-6">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/projects"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg"
+            className="bg-blue-500 text-white px-6 py-3 rounded"
           >
             View Projects
           </Link>
 
           <Link
             to="/contact"
-            className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg"
+            className="border border-blue-500 text-blue-500 px-6 py-3 rounded"
           >
             Contact Me
           </Link>
