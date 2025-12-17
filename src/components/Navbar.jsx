@@ -44,8 +44,7 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 
-          <a
-  href={`${window.location.origin}/My_portfolio/my_resume.pdf`}
+          <a href={`${import.meta.env.BASE_URL}my_resume.pdf`}
   target="_blank"
   rel="noopener noreferrer" className="border border-blue-600 dark:border-blue-400 
     text-blue-600 dark:text-blue-400 
