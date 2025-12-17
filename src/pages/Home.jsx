@@ -13,15 +13,11 @@ function Home() {
           Shubham Yadav
         </motion.h1>
 
-        <motion.h2
-          className="mt-4 text-lg md:text-2xl text-gray-700 dark:text-gray-300"
-        >
+        <motion.h2 className="mt-4 text-lg md:text-2xl text-gray-700 dark:text-gray-300">
           Aspiring Full-Stack Developer
         </motion.h2>
 
-        <motion.p
-          className="mt-6 text-sm md:text-lg text-gray-600 dark:text-gray-400"
-        >
+        <motion.p className="mt-6 text-sm md:text-lg text-gray-600 dark:text-gray-400">
           Final-year BSc IT student passionate about building modern web
           applications using React, Python, Django, and MySQL.
         </motion.p>

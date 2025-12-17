@@ -9,8 +9,8 @@ function About() {
         </h2>
 
         <p className="mb-10">
-          I am Shubham Yadav, a BSc IT final-year student focusing on
-          full-stack development and modern web technologies.
+          I am Shubham Yadav, a BSc IT final-year student focusing on full-stack
+          development and modern web technologies.
         </p>
 
         <Skills />

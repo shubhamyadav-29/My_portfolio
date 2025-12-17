@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import.meta.env.BASE_URL
 
 function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +10,8 @@ function Navbar({ darkMode, setDarkMode }) {
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
   ];
+
+  const resumeUrl = `${import.meta.env.BASE_URL}my_resume.pdf`;
 
   return (
     <nav className="bg-slate-100 dark:bg-slate-900 shadow px-4 sm:px-6 md:px-10 py-4 sticky top-0 z-50">
@@ -28,45 +29,44 @@ function Navbar({ darkMode, setDarkMode }) {
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `
-                  px-1 pb-1 transition
-                  text-gray-800 dark:text-gray-200
-                  hover:text-blue-600 dark:hover:text-blue-400
-                  ${
-                    isActive
-                      ? "border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400"
-                      : ""
-                  }
-                  `
+                  `px-1 pb-1 transition
+                   text-gray-800 dark:text-gray-200
+                   hover:text-blue-600 dark:hover:text-blue-400
+                   ${
+                     isActive
+                       ? "border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400"
+                       : ""
+                   }`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
           </ul>
-<a
-  href={`${import.meta.env.BASE_URL}my_resume.pdf`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-blue-600 dark:border-blue-400 
-    text-blue-600 dark:text-blue-400 
-    px-3 py-1 rounded 
-    hover:bg-blue-600 hover:text-white transition"
->
- View Resume
-</a>
-<a
-  href={`${import.meta.env.BASE_URL}my_resume.pdf`}
-  download  className="border border-blue-600 dark:border-blue-400 
-    text-blue-600 dark:text-blue-400 
-    px-3 py-1 rounded 
-    hover:bg-blue-600 hover:text-white transition"
- >
-  Download Resume
-</a>
 
+          {/* Resume Buttons (Desktop) */}
+          <a
+            href={resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-blue-600 dark:border-blue-400 
+              text-blue-600 dark:text-blue-400 
+              px-3 py-1 rounded 
+              hover:bg-blue-600 hover:text-white transition"
+          >
+            View Resume
+          </a>
 
-
+          <a
+            href={resumeUrl}
+            download
+            className="border border-blue-600 dark:border-blue-400 
+              text-blue-600 dark:text-blue-400 
+              px-3 py-1 rounded 
+              hover:bg-blue-600 hover:text-white transition"
+          >
+            Download Resume
+          </a>
 
           {/* Theme Toggle */}
           <button
@@ -96,15 +96,13 @@ function Navbar({ darkMode, setDarkMode }) {
                 to={link.path}
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
-                  `
-                  text-gray-800 dark:text-gray-200
-                  hover:text-blue-600 dark:hover:text-blue-400
-                  ${
-                    isActive
-                      ? "text-blue-600 dark:text-blue-400 font-semibold"
-                      : ""
-                  }
-                  `
+                  `text-gray-800 dark:text-gray-200
+                   hover:text-blue-600 dark:hover:text-blue-400
+                   ${
+                     isActive
+                       ? "text-blue-600 dark:text-blue-400 font-semibold"
+                       : ""
+                   }`
                 }
               >
                 {link.label}
@@ -112,26 +110,41 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 
-          <div className="flex items-center gap-4 pt-2 border-t border-slate-300 dark:border-slate-700">
+          {/* Resume Buttons (Mobile) */}
+          <div className="flex flex-col gap-3 pt-3 border-t border-slate-300 dark:border-slate-700">
             <a
-              href="/my_resume.pdf"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-blue-600 dark:border-blue-400 
-                text-blue-600 dark:text-blue-400 
-                px-3 py-1 rounded 
+              className="block text-center 
+                border border-blue-600 dark:border-blue-400
+                text-blue-600 dark:text-blue-400
+                px-4 py-2 rounded
                 hover:bg-blue-600 hover:text-white transition"
             >
-              Resume
+              View Resume
             </a>
 
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="px-3 py-1 rounded bg-slate-200 dark:bg-slate-700"
+            <a
+              href={resumeUrl}
+              download
+              className="block text-center 
+                border border-blue-600 dark:border-blue-400
+                text-blue-600 dark:text-blue-400
+                px-4 py-2 rounded
+                hover:bg-blue-600 hover:text-white transition"
             >
-              {darkMode ? "☀️" : "🌙"}
-            </button>
+              Download Resume
+            </a>
           </div>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="w-full px-3 py-2 rounded bg-slate-200 dark:bg-slate-700"
+          >
+            {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
+          </button>
         </div>
       )}
     </nav>
