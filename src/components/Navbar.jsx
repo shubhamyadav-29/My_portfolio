@@ -53,7 +53,16 @@ function Navbar({ darkMode, setDarkMode }) {
     px-3 py-1 rounded 
     hover:bg-blue-600 hover:text-white transition"
 >
-  Resume
+ View Resume
+</a>
+<a
+  href={`${import.meta.env.BASE_URL}my_resume.pdf`}
+  download  className="border border-blue-600 dark:border-blue-400 
+    text-blue-600 dark:text-blue-400 
+    px-3 py-1 rounded 
+    hover:bg-blue-600 hover:text-white transition"
+ >
+  Download Resume
 </a>
 
 
