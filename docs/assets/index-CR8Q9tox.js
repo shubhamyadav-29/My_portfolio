@@ -13,10 +13,10 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
                   text-gray-800 dark:text-gray-200
                   hover:text-blue-600 dark:hover:text-blue-400
                   ${h?"border-b-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400":""}
-                  `,children:f.label},f.path))}),G.jsx("a",{href:"/my_resume.pdf",target:"_blank",rel:"noopener noreferrer",className:`border border-blue-600 dark:border-blue-400 \r
-              text-blue-600 dark:text-blue-400 \r
-              px-3 py-1 rounded \r
-              hover:bg-blue-600 hover:text-white transition`,children:"Resume"}),G.jsx("button",{onClick:()=>i(!a),className:"px-3 py-1 rounded bg-slate-200 dark:bg-slate-700",children:a?"☀️":"🌙"})]}),G.jsx("button",{className:"md:hidden text-2xl text-gray-800 dark:text-gray-200",onClick:()=>u(!s),children:"☰"})]}),s&&G.jsxs("div",{className:"md:hidden mt-4 rounded-lg bg-slate-100 dark:bg-slate-800 p-4 space-y-4",children:[G.jsx("ul",{className:"flex flex-col gap-4",children:c.map(f=>G.jsx(Sc,{to:f.path,onClick:()=>u(!1),className:({isActive:h})=>`
+                  `,children:f.label},f.path))}),G.jsx("a",{href:`${window.location.origin}/My_portfolio/my_resume.pdf`,target:"_blank",rel:"noopener noreferrer",className:`border border-blue-600 dark:border-blue-400 \r
+    text-blue-600 dark:text-blue-400 \r
+    px-3 py-1 rounded \r
+    hover:bg-blue-600 hover:text-white transition`,children:"Resume"}),G.jsx("button",{onClick:()=>i(!a),className:"px-3 py-1 rounded bg-slate-200 dark:bg-slate-700",children:a?"☀️":"🌙"})]}),G.jsx("button",{className:"md:hidden text-2xl text-gray-800 dark:text-gray-200",onClick:()=>u(!s),children:"☰"})]}),s&&G.jsxs("div",{className:"md:hidden mt-4 rounded-lg bg-slate-100 dark:bg-slate-800 p-4 space-y-4",children:[G.jsx("ul",{className:"flex flex-col gap-4",children:c.map(f=>G.jsx(Sc,{to:f.path,onClick:()=>u(!1),className:({isActive:h})=>`
                   text-gray-800 dark:text-gray-200
                   hover:text-blue-600 dark:hover:text-blue-400
                   ${h?"text-blue-600 dark:text-blue-400 font-semibold":""}
