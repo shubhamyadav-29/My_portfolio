@@ -14,7 +14,6 @@ function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav className="bg-slate-100 dark:bg-slate-900 shadow px-4 sm:px-6 md:px-10 py-4 sticky top-0 z-50">
       <div className="flex justify-between items-center">
-
         {/* Logo */}
         <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
           Shubham
@@ -45,22 +44,17 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 
-          {/* Resume */}
-          {/* <a
-            href="/my_resume.pdf"
+          <a
+            href={`${import.meta.env.BASE_URL}my_resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="border border-blue-600 dark:border-blue-400 
-              text-blue-600 dark:text-blue-400 
-              px-3 py-1 rounded 
-              hover:bg-blue-600 hover:text-white transition"
+    text-blue-600 dark:text-blue-400 
+    px-3 py-1 rounded 
+    hover:bg-blue-600 hover:text-white transition"
           >
             Resume
-          </a> */}
-          <a href={`${import.meta.env.BASE_URL}my_resume.pdf`} target="_blank">
-  Resume
-</a>
-
+          </a>
 
           {/* Theme Toggle */}
           <button
