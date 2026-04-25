@@ -2,6 +2,8 @@ import Netflix_homepage from "../assets/Netflix_homepage.png";
 import TreeWebpage from "../assets/TreeWebpage.png";
 import Todolist from "../assets/Todolist.png";
 import Virtual_campus from "../assets/Virtual_campus.png";
+import Weather from "../assets/Weather.png";
+import Mytodo from "../assets/MyTodo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -57,6 +59,22 @@ function Projects() {
       tech: ["HTML", "Bootstrap", "JS", "Django", "Python", "SQLite"],
       github: "https://github.com/shubhamyadav-29/to-do-list.git",
       live: "https://todo-manager-q7rz.onrender.com/todolist/",
+    },
+    {
+      title: "My Todos Website",
+      image: Mytodo,
+      description: "Task management application",
+      tech: ["HTML", "", "JS", "React"],
+      github: "https://github.com/shubhamyadav-29/-Todo-List-App",
+      live: "https://todo-list-app-sage-eight.vercel.app/",
+    },
+    {
+      title: "Weather App",
+      image: Weather, // make sure you imported image correctly
+      description: "Real-time weather application using API",
+      tech: ["React", "CSS", "JavaScript", "OpenWeather API"],
+      github: "https://github.com/shubhamyadav-29/Weather-Web-Application-", // update if different
+      live: "https://weather-web-application-psi.vercel.app/", // update your deployed link
     },
   ];
 
